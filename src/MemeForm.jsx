@@ -27,12 +27,12 @@ function MemeForm() {
                 />
             </div>
             <div className="input-group">
-                <label htmlFor="topText">Image URL:</label>
+                <label htmlFor="topText">Top Text:</label>
                 <input
                     type="text"
                     id="topText"
                     value={topText}
-                    onChange={(e) => setImageUrl(e.target.value)}
+                    onChange={(e) => setTopText(e.target.value)}
                     placeholder="Enter top text..."
                     required
                 />
@@ -57,4 +57,4 @@ function MemeForm() {
 
 }
 
-export default Memeform
+export default MemeForm
