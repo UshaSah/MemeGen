@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import MemeForm from './MemeForm'
+import MemeDisplay from './MemeDisplay'
 import './App.css'
 
 
@@ -17,8 +18,17 @@ function App() {
         <h1>🎭 Meme Generator</h1>
         <p>Create your own memes with React!</p>
       </header>
+
       <main className="app-main">
-        <MemeForm />
+        <div className="form-container">
+          <MemeForm onGenerateMeme={handleGenerateMeme} />
+        </div>
+
+        {currentMeme && (
+          <div className="meme-container">
+            <MemeDisplay meme={currentMeme} />
+          </div>
+        )}
       </main>
     </div>
   )
